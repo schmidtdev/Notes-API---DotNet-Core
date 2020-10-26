@@ -27,6 +27,7 @@ namespace Notes_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<UserContext>(opt => opt.UseInMemoryDatabase("NoteList"));
             services.AddDbContext<NoteContext>(opt => opt.UseInMemoryDatabase("NoteList"));
             services.AddControllers();
         }

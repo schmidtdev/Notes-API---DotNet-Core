@@ -13,5 +13,6 @@ namespace Notes_API.Models
         public string CreatedAt { get; set; }
         public string DeadLine { get; set; }
         public bool IsComplete { get; set; }
+        public int UserID { get; set; }
     }
 }
